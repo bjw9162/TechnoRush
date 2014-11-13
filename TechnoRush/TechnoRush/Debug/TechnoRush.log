@@ -1,11 +1,13 @@
-﻿Build started 11/11/2014 8:31:51 PM.
+﻿Build started 11/13/2014 12:02:41 PM.
      1>Project "C:\Users\SIMPLY THE COMMODORE\Desktop\TechnoRush-master\TechnoRush\TechnoRush\TechnoRush.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SIMPLY THE COMMODORE\Desktop\TechnoRush-master\TechnoRush\\DirectXTK\inc" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt /FS WorldManager.cpp
-         WorldManager.cpp
-     1>c:\users\simply the commodore\desktop\technorush-master\technorush\technorush\worldmanager.cpp(37): warning C4018: '<' : signed/unsigned mismatch
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SIMPLY THE COMMODORE\Desktop\TechnoRush-master\TechnoRush\\DirectXTK\inc" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt /FS Game.cpp
+         Game.cpp
+     1>c:\users\simply the commodore\desktop\technorush-master\technorush\technorush\inputmanager.h(49): warning C4091: 'static ' : ignored on left of 'InputManager' when no variable is declared
+     1>c:\users\simply the commodore\desktop\technorush-master\technorush\technorush\assetloader.h(23): warning C4091: 'static ' : ignored on left of 'AssetLoader' when no variable is declared
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\SIMPLY THE COMMODORE\Desktop\TechnoRush-master\TechnoRush\Debug\TechnoRush.exe" /INCREMENTAL /NOLOGO d3d11.lib d3dcompiler.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\SIMPLY THE COMMODORE\Desktop\TechnoRush-master\TechnoRush\Debug\TechnoRush.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\SIMPLY THE COMMODORE\Desktop\TechnoRush-master\TechnoRush\Debug\TechnoRush.lib" /MACHINE:X86 Debug\Camera.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\SIMPLY THE COMMODORE\Desktop\TechnoRush-master\TechnoRush\Debug\TechnoRush.exe" /INCREMENTAL /NOLOGO d3d11.lib d3dcompiler.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\SIMPLY THE COMMODORE\Desktop\TechnoRush-master\TechnoRush\Debug\TechnoRush.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\SIMPLY THE COMMODORE\Desktop\TechnoRush-master\TechnoRush\Debug\TechnoRush.lib" /MACHINE:X86 Debug\AssetLoader.obj
+         Debug\Camera.obj
          Debug\DebugCameraController.obj
          Debug\DirectXGame.obj
          Debug\dxerr.obj
@@ -25,4 +27,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:01.53
+Time Elapsed 00:00:01.79

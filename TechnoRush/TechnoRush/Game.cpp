@@ -43,7 +43,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE prevInstance,
 Game::Game(HINSTANCE hInstance) : DirectXGame(hInstance)
 {
 	// Set up our custom caption and window size
-	windowCaption = L"Demo DX11 Game";
+	windowCaption = L"Technorush";
 	windowWidth = 800;
 	windowHeight = 600;
 }
@@ -51,20 +51,21 @@ Game::Game(HINSTANCE hInstance) : DirectXGame(hInstance)
 Game::~Game()
 {
 	// Release all of the D3D stuff that's still hanging out
-	ReleaseMacro(vertexShader);
-	ReleaseMacro(pixelShader);
-	ReleaseMacro(vsConstantBuffer);
-	ReleaseMacro(inputLayout);
-	ReleaseMacro(textureView);
-	ReleaseMacro(samplerState);
-	delete(material);
+	//ReleaseMacro(vertexShader);
+	//ReleaseMacro(pixelShader);
+	//ReleaseMacro(vsConstantBuffer);
+	//ReleaseMacro(inputLayout);
+	//ReleaseMacro(textureView);
+	//ReleaseMacro(samplerState);
+	//delete(material);
 	delete(gameManager);
-	while (entities.size() > 0)
-	{
-		GameEntity* entity = entities[entities.size() - 1];
-		delete(entity);
-		entities.pop_back();
-	}
+	//delete(worldManager);
+	//while (entities.size() > 0)
+	//{
+	//	GameEntity* entity = entities[entities.size() - 1];
+	//	delete(entity);
+	//	entities.pop_back();
+	//}
 }
 
 #pragma endregion
@@ -76,7 +77,7 @@ Game::~Game()
 bool Game::Init()
 {
 	gameManager = new GameManager;
-	worldManager = new WorldManager();
+	//worldManager = new WorldManager();
 	//camera = new Camera();
 
 	if (!DirectXGame::Init())
@@ -93,6 +94,9 @@ bool Game::Init()
 // Creates the vertex and index buffers for a single triangle
 void Game::CreateGeometryBuffers()
 {
+	//AssetLoader::LoadAssets(device, deviceContext);
+	gameManager->LoadData(device, deviceContext);
+	/*
 	std::vector<Vertex> cubeVec(8);
 
 	textureView = nullptr;
@@ -126,50 +130,54 @@ void Game::CreateGeometryBuffers()
 	std::cout << result;
 
 	material = new Material(textureView, samplerState, vertexShader, vsConstantBuffer, pixelShader, inputLayout);
-	
-
-	std::srand((unsigned int)time(0));
-
-	cubeVec[0] = { XMFLOAT3(-0.5f, +0.5f, +0.0f), white, XMFLOAT2(0.0f, 0.0f) };
-	cubeVec[1] = { XMFLOAT3(+0.5f, +0.5f, +0.0f), white, XMFLOAT2(1.0f, 0.0f) };
-	cubeVec[2] = { XMFLOAT3(+0.5f, -0.5f, +0.0f), white, XMFLOAT2(1.0f, 1.0f) };
-	cubeVec[3] = { XMFLOAT3(-0.5f, -0.5f, +0.0f), white, XMFLOAT2(0.0f, 1.0f) };
-	cubeVec[4] = { XMFLOAT3(-0.5f, +0.5f, -0.5f), white, XMFLOAT2(0.0f, 0.0f) };
-	cubeVec[5] = { XMFLOAT3(+0.5f, +0.5f, -0.5f), white, XMFLOAT2(1.0f, 0.0f) };
-	cubeVec[6] = { XMFLOAT3(+0.5f, -0.5f, -0.5f), white, XMFLOAT2(1.0f, 1.0f) };
-	cubeVec[7] = { XMFLOAT3(-0.5f, -0.5f, -0.5f), white, XMFLOAT2(0.0f, 1.0f) };
-
-	std::vector<UINT> cubeInd = { 2, 1, 0, 3, 2, 0, 1, 4, 0, 5, 4, 1, 6, 5, 1, 1, 2, 6, 7, 6, 2, 7, 2, 3, 0, 4, 7, 7, 3, 0, 4, 5, 6, 6, 7, 4 };
+	*/
 
 	
 
+	//cubeVec[0] = { XMFLOAT3(-0.5f, +0.5f, +0.0f), white, XMFLOAT2(0.0f, 0.0f) };
+	//cubeVec[1] = { XMFLOAT3(+0.5f, +0.5f, +0.0f), white, XMFLOAT2(1.0f, 0.0f) };
+	//cubeVec[2] = { XMFLOAT3(+0.5f, -0.5f, +0.0f), white, XMFLOAT2(1.0f, 1.0f) };
+	//cubeVec[3] = { XMFLOAT3(-0.5f, -0.5f, +0.0f), white, XMFLOAT2(0.0f, 1.0f) };
+	//cubeVec[4] = { XMFLOAT3(-0.5f, +0.5f, -0.5f), white, XMFLOAT2(0.0f, 0.0f) };
+	//cubeVec[5] = { XMFLOAT3(+0.5f, +0.5f, -0.5f), white, XMFLOAT2(1.0f, 0.0f) };
+	//cubeVec[6] = { XMFLOAT3(+0.5f, -0.5f, -0.5f), white, XMFLOAT2(1.0f, 1.0f) };
+	//cubeVec[7] = { XMFLOAT3(-0.5f, -0.5f, -0.5f), white, XMFLOAT2(0.0f, 1.0f) };
 
-	for (int i = 0; i < 30; i++)
+	//std::vector<UINT> cubeInd = { 2, 1, 0, 3, 2, 0, 1, 4, 0, 5, 4, 1, 6, 5, 1, 1, 2, 6, 7, 6, 2, 7, 2, 3, 0, 4, 7, 7, 3, 0, 4, 5, 6, 6, 7, 4 };
+
+	
+	// This is the stream to open up the file
+	/*
+	ifstream in_Stream1;
+	for (int i = 0; i < 45; i++)
 	{
-		entities.push_back(new GameEntity(cubeVec, cubeInd, device, &dataToSendToVSConstantBuffer, material));
+		in_Stream1.open("Cube3.obj");
+		//in_Stream1.open("Sphere.obj");
+		entities.push_back(AssetLoader::LoadOBJ(device, &dataToSendToVSConstantBuffer, material, in_Stream1)); // The stream is for the OBJ to be loaded
+		in_Stream1.close();
 	}
+	
 	worldManager->getEntities(&entities);
 
-	// This is the stream to open up the file
-	ifstream in_Stream1;
+	
 	in_Stream1.open("PlayerShip.obj");
-	entities.push_back(AssetLoader::LoadOBJ(device, &dataToSendToVSConstantBuffer, material, in_Stream1)); // The stream is for the OBJ to me loaded
+	entities.push_back(AssetLoader::LoadOBJ(device, &dataToSendToVSConstantBuffer, material, in_Stream1)); // The stream is for the OBJ to be loaded
 	entities[entities.size() - 1]->position(XMFLOAT4(0.0f, 0.0f, -3.0f, 0.0f));
 	
 
-	in_Stream1.close();
-	in_Stream1.open("Cube2.obj");
-
 	//last one is the UI
 
-	entities.push_back(AssetLoader::LoadOBJ(device, &dataToSendToVSConstantBuffer, material, in_Stream1)); // The stream is for the OBJ to me loaded
+	in_Stream1.close();
+	in_Stream1.open("Cube3.obj");
+	entities.push_back(AssetLoader::LoadOBJ(device, &dataToSendToVSConstantBuffer, material, in_Stream1)); // The stream is for the OBJ to be loaded
 	entities[entities.size()-1]->position(XMFLOAT4(-4.5f, 3.5f, 0.0f, 0.0f));
 	entities[entities.size() - 1]->layer(2);
+
 
 	// Close the stream when we're done with it
 	in_Stream1.close();
 
-	
+	*/
 
 }
 
@@ -178,9 +186,11 @@ void Game::CreateGeometryBuffers()
 // vertex data to the device
 void Game::LoadShadersAndInputLayout()
 {
+	/*
 	// Load Vertex Shader --------------------------------------
 	ID3DBlob* vsBlob;
-	D3DReadFileToBlob(L"VertexShader.cso", &vsBlob);
+	//D3DReadFileToBlob(L"VertexShader.cso", &vsBlob);
+	D3DReadFileToBlob(L"VertexPhong.cso", &vsBlob);
 
 	// Create the shader on the device
 	HR(device->CreateVertexShader(
@@ -196,7 +206,8 @@ void Game::LoadShadersAndInputLayout()
 
 	// Load Pixel Shader ---------------------------------------
 	ID3DBlob* psBlob;
-	D3DReadFileToBlob(L"PixelShader.cso", &psBlob);
+	//D3DReadFileToBlob(L"PixelShader.cso", &psBlob);
+	D3DReadFileToBlob(L"PixelPhong.cso", &psBlob);
 
 	// Create the shader on the device
 	HR(device->CreatePixelShader(
@@ -216,15 +227,14 @@ void Game::LoadShadersAndInputLayout()
 	cBufferDesc.CPUAccessFlags = 0;
 	cBufferDesc.MiscFlags = 0;
 	cBufferDesc.StructureByteStride = 0;
-	HR(device->CreateBuffer(
-		&cBufferDesc,
-		NULL,
-		&vsConstantBuffer));
+	HR(device->CreateBuffer(&cBufferDesc, NULL, &vsConstantBuffer));
+	*/
 }
 
 // From http://takinginitiative.wordpress.com/2011/12/11/directx-1011-basic-shader-reflection-automatic-input-layout-creation/
 void Game::CreateInputLayoutDescFromVertexShaderSignature(ID3DBlob* shaderBlob, ID3D11InputLayout** inputLayout)
 {
+	/*
 	// Reflect shader info
 	ID3D11ShaderReflection* vertexShaderReflection = NULL;
 	HR(D3DReflect(shaderBlob->GetBufferPointer(), shaderBlob->GetBufferSize(), IID_ID3D11ShaderReflection, (void**)&vertexShaderReflection));
@@ -284,6 +294,7 @@ void Game::CreateInputLayoutDescFromVertexShaderSignature(ID3DBlob* shaderBlob, 
 
 	// Free allocation shader reflection memory
 	ReleaseMacro(vertexShaderReflection);
+	*/
 }
 
 #pragma endregion
@@ -309,16 +320,16 @@ void Game::UpdateScene(float dt)
 {
 	gameManager->Update(dt);
 
-	if (gameManager->getGameState() == Play)
-	{
-		worldManager->Update(dt);
+	//if (gameManager->getGameState() == Play)
+	//{
+		
 
 		// Update entities
-		for each (GameEntity* entity in entities)
-		{
-			entity->Update(dt);
-		}
-	}
+		//for each (GameEntity* entity in entities)
+		//{
+		//	entity->Update(dt);
+		//}
+	//}
 
 	// Update local constant buffer data
 	//dataToSendToVSConstantBuffer.view = gameManager->mainCamera()->view();
@@ -328,7 +339,7 @@ void Game::UpdateScene(float dt)
 // Clear the screen, redraw everything, present
 void Game::DrawScene()
 {
-	gameManager->RenderScene(&entities[0], entities.size(), renderTargetView, depthStencilView, deviceContext, dataToSendToVSConstantBuffer.view, dataToSendToVSConstantBuffer.projection);
+	gameManager->RenderScene(renderTargetView, depthStencilView, deviceContext);
 	// Present the buffer
 	HR(swapChain->Present(0, 0));
 }

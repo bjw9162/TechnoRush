@@ -7,11 +7,11 @@ Loosely based on code from http://msdn.microsoft.com/en-us/library/windows/apps/
 #pragma once
 #include <DirectXMath.h>
 
-#define ROTATION_GAIN 0.0004f
-#define MOVEMENT_GAIN 0.001f
+#define ROTATION_GAIN 0.0015f
+#define MOVEMENT_GAIN 0.01f
 
 class Camera;
-static class DebugCameraController
+class DebugCameraController
 {
 public:
 	static void Update();

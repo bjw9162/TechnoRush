@@ -3,21 +3,29 @@
 #include "Mesh.h"
 #include "Game.h"
 #include "Material.h"
+#include "AssetLoader.h"
 
 
 
-GameEntity::GameEntity(std::vector<Vertex>& vertices, std::vector<UINT>& indices, ID3D11Device *device, VSConstantBufferLayout *constantBufferLayout, Material* material)
+GameEntity::GameEntity(std::vector<XMFLOAT3>* positions, std::vector<std::array<UINT, 3>>* indices, std::vector<XMFLOAT2>* uvs, std::vector<XMFLOAT3>* norms, XMFLOAT4* color, ID3D11Device *device, VSConstantBufferLayout *constantBufferLayout, Material* material)
 {
-	_mesh = new Mesh(vertices, indices, device);
+	_mesh = new Mesh(positions, indices, uvs, norms, color, device);
 	this->_constantBufferLayout = constantBufferLayout;
 	this->_material = material;
 	init();
 }
 
+GameEntity::GameEntity(Material* material, Mesh* mesh, VSConstantBufferLayout* constantBufferLayout)
+{
+	_mesh = mesh;
+	_material = material;
+	_constantBufferLayout = constantBufferLayout;
+	init();
+}
 
 GameEntity::~GameEntity()
 {
-	delete _mesh;
+	//delete _mesh;
 }
 
 
@@ -61,19 +69,16 @@ void GameEntity::Draw(ID3D11DeviceContext* deviceContext)
 	// Set the current vertex and pixel shaders, as well the constant buffer for the vert shader
 	deviceContext->VSSetShader(_material->vertexShader(), NULL, 0);
 	ID3D11Buffer* buffer = _material->vsConstantBuffer();
-	deviceContext->VSSetConstantBuffers(
-		0,	// Corresponds to the constant buffer's register in the vertex shader
-		1,
-		&(buffer));
+	deviceContext->VSSetConstantBuffers(0, 1, &(buffer));
 	deviceContext->PSSetShader(_material->pixelShader(), NULL, 0);
 
 	// Set draw buffer
 	UINT stride = sizeof(Vertex);
 	UINT offset = 0;
 	ID3D11Buffer *vertBuffer = _mesh->VertexBuffer();
-	ID3D11Buffer *indexBuffer = _mesh->IndexBuffer();
+	//ID3D11Buffer *indexBuffer = _mesh->IndexBuffer();
 	deviceContext->IASetVertexBuffers(0, 1, &vertBuffer, &stride, &offset);
-	deviceContext->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0);
+	//deviceContext->IASetIndexBuffer(indexBuffer, DXGI_FORMAT_R32_UINT, 0);
 
 	// Set material resources
 	ID3D11ShaderResourceView* textureView = _material->textureView();
@@ -85,7 +90,8 @@ void GameEntity::Draw(ID3D11DeviceContext* deviceContext)
 	_constantBufferLayout->world = _world;
 	deviceContext->UpdateSubresource(_material->vsConstantBuffer(), 0, NULL, _constantBufferLayout, 0, 0);
 
-	deviceContext->DrawIndexed(_mesh->Num_Indicies(), 0, 0);
+	//deviceContext->DrawIndexed(_mesh->Num_Indicies(), 0, 0);
+	deviceContext->Draw(_mesh->NumIndices(), 0);
 }
 
 XMFLOAT4 GameEntity::position() { return _position; }

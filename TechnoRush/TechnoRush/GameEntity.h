@@ -19,10 +19,11 @@ struct VSConstantBufferLayout;
 class GameEntity
 {
 public:
-	GameEntity(std::vector<Vertex>& vertices, std::vector<UINT>& indices,
+	GameEntity(std::vector<XMFLOAT3>* positions, std::vector<std::array<UINT, 3>>* indices, std::vector<XMFLOAT2>* uvs, std::vector<XMFLOAT3>* norms, XMFLOAT4* color,
 		ID3D11Device *device,
 		VSConstantBufferLayout *constantBufferLayout,
 		Material *material);
+	GameEntity(Material* material, Mesh* mesh, VSConstantBufferLayout* constantBufferLayout);
 	~GameEntity();
 
 	//XMFLOAT4X4* World();

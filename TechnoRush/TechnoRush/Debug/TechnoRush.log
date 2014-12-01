@@ -1,12 +1,58 @@
-﻿Build started 11/13/2014 12:02:41 PM.
-     1>Project "C:\Users\SIMPLY THE COMMODORE\Desktop\TechnoRush-master\TechnoRush\TechnoRush\TechnoRush.vcxproj" on node 2 (Build target(s)).
-     1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SIMPLY THE COMMODORE\Desktop\TechnoRush-master\TechnoRush\\DirectXTK\inc" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt /FS Game.cpp
+﻿Build started 12/1/2014 8:37:08 AM.
+     1>Project "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\TechnoRush\TechnoRush.vcxproj" on node 2 (Build target(s)).
+     1>FxCompile:
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T ps_4_0_level_9_1 /Fo "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\Debug\PixelPhong.cso" /Od /Zi PixelPhong.hlsl 
+         compilation object save succeeded; see C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\Debug\PixelPhong.cso
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T ps_4_0_level_9_1 /Fo "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\Debug\PixelShader.cso" /Od /Zi Shaders\PixelShader.hlsl 
+         compilation object save succeeded; see C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\Debug\PixelShader.cso
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T vs_4_0_level_9_1 /Fo "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\Debug\VertexShader.cso" /Od /Zi Shaders\VertexShader.hlsl 
+         compilation object save succeeded; see C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\Debug\VertexShader.cso
+         C:\Program Files (x86)\Windows Kits\8.1\bin\x86\fxc.exe /nologo /E"main" /T vs_4_0_level_9_1 /Fo "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\Debug\VertexPhong.cso" /Od /Zi VertexPhong.hlsl 
+     1>C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\TechnoRush\VertexPhong.hlsl(32,2-34): warning X3206: implicit truncation of vector type
+         
+         compilation object save succeeded; see C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\Debug\VertexPhong.cso
+       ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I"C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\\DirectXTK\inc" /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt /FS AssetLoader.cpp Camera.cpp DebugCameraController.cpp DirectXGame.cpp dxerr.cpp Game.cpp GameEntity.cpp GameManager.cpp GameTimer.cpp InputManager.cpp Material.cpp Mesh.cpp Obstacle.cpp WorldChunk.cpp WorldManager.cpp
+         WorldManager.cpp
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\worldmanager.cpp(37): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\worldmanager.cpp(41): warning C4244: '+=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\worldmanager.cpp(56): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\worldmanager.cpp(62): warning C4244: '-=' : conversion from 'double' to 'float', possible loss of data
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\worldmanager.cpp(110): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\worldmanager.cpp(124): warning C4018: '<' : signed/unsigned mismatch
+         WorldChunk.cpp
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\worldchunk.cpp(32): warning C4018: '<' : signed/unsigned mismatch
+         Obstacle.cpp
+         Mesh.cpp
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\mesh.cpp(37): warning C4018: '<' : signed/unsigned mismatch
+         Material.cpp
+         InputManager.cpp
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\inputmanager.cpp(85): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\inputmanager.cpp(86): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\inputmanager.cpp(87): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\inputmanager.cpp(88): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\inputmanager.cpp(89): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\inputmanager.cpp(90): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\inputmanager.cpp(91): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\inputmanager.cpp(92): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\inputmanager.cpp(93): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\inputmanager.cpp(94): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\inputmanager.cpp(95): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\inputmanager.cpp(96): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\inputmanager.cpp(97): warning C4800: 'int' : forcing value to bool 'true' or 'false' (performance warning)
+         GameTimer.cpp
+         GameManager.cpp
+     1>c:\users\simply the commodore\documents\github\technorush\technorush\technorush\gamemanager.cpp(199): warning C4305: 'argument' : truncation from 'double' to 'float'
+         GameEntity.cpp
          Game.cpp
-     1>c:\users\simply the commodore\desktop\technorush-master\technorush\technorush\inputmanager.h(49): warning C4091: 'static ' : ignored on left of 'InputManager' when no variable is declared
-     1>c:\users\simply the commodore\desktop\technorush-master\technorush\technorush\assetloader.h(23): warning C4091: 'static ' : ignored on left of 'AssetLoader' when no variable is declared
+         dxerr.cpp
+         DirectXGame.cpp
+         DebugCameraController.cpp
+         Camera.cpp
+         AssetLoader.cpp
+         Generating Code...
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\SIMPLY THE COMMODORE\Desktop\TechnoRush-master\TechnoRush\Debug\TechnoRush.exe" /INCREMENTAL /NOLOGO d3d11.lib d3dcompiler.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\SIMPLY THE COMMODORE\Desktop\TechnoRush-master\TechnoRush\Debug\TechnoRush.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\SIMPLY THE COMMODORE\Desktop\TechnoRush-master\TechnoRush\Debug\TechnoRush.lib" /MACHINE:X86 Debug\AssetLoader.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\Debug\TechnoRush.exe" /INCREMENTAL /NOLOGO d3d11.lib d3dcompiler.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\Debug\TechnoRush.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\Debug\TechnoRush.lib" /MACHINE:X86 Debug\AssetLoader.obj
          Debug\Camera.obj
          Debug\DebugCameraController.obj
          Debug\DirectXGame.obj
@@ -21,10 +67,34 @@
          Debug\Obstacle.obj
          Debug\WorldChunk.obj
          Debug\WorldManager.obj
-         "C:\Users\SIMPLY THE COMMODORE\Desktop\TechnoRush-master\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\DirectXTK.lib"
-         TechnoRush.vcxproj -> C:\Users\SIMPLY THE COMMODORE\Desktop\TechnoRush-master\TechnoRush\Debug\TechnoRush.exe
-     1>Done Building Project "C:\Users\SIMPLY THE COMMODORE\Desktop\TechnoRush-master\TechnoRush\TechnoRush\TechnoRush.vcxproj" (Build target(s)).
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\AlphaTestEffect.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\BasicEffect.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\CommonStates.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\DDSTextureLoader.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\DGSLEffect.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\DGSLEffectFactory.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\DualTextureEffect.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\BinaryReader.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\EffectCommon.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\EffectFactory.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\EnvironmentMapEffect.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\GamePad.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\GeometricPrimitive.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\Model.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\ModelLoadCMO.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\ModelLoadSDKMESH.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\pch.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\ScreenGrab.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\SimpleMath.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\SkinnedEffect.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\SpriteBatch.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\PrimitiveBatch.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\SpriteFont.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\VertexTypes.obj"
+         "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\DirectXTK\Bin\Desktop_2013\Win32\Debug\WICTextureLoader.obj"
+         TechnoRush.vcxproj -> C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\Debug\TechnoRush.exe
+     1>Done Building Project "C:\Users\SIMPLY THE COMMODORE\Documents\GitHub\TechnoRush\TechnoRush\TechnoRush\TechnoRush.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.79
+Time Elapsed 00:00:14.92

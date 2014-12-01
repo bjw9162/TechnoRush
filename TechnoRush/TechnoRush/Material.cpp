@@ -1,6 +1,7 @@
 
 #include "Material.h"
-#include "WICTextureLoader.h"
+#include "AssetLoader.h"
+//#include "WICTextureLoader.h"
 
 
 
